@@ -2,6 +2,12 @@ import Image from "next/image";
 //import styles from "./page.module.css";
 import styles from './nextjsdoc.module.scss';
 
+export const metadata = {
+  title: "Jay’s Pagessssss",
+  description: "Jay's personal profile page",
+};
+
+
 export default function NextDoc() {
   return (
     <div className={styles.page}>
