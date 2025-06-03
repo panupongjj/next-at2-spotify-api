@@ -12,7 +12,7 @@ function Header() {
       <nav>
         <ul>
           <li>
-            <Link href='/test'><span>TEST</span>-Feed</Link>
+            <Link href='/genres'><span>GENRES</span></Link>
           </li>
           <li>
             <Link href="https://jay-downunder.dev/" target="_blank" rel="noopener noreferrer">
