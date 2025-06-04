@@ -28,7 +28,7 @@ async function WorldNewsPage() {
       <HeroSection 
         title='Globe' 
         description='Catch up on all the global news via BBC News'
-        bgImage="/backgrounds/spotify-adds.webp"
+        bgImage="/backgrounds/musicList.webp"
       />
       <h1> API DATA </h1>
       

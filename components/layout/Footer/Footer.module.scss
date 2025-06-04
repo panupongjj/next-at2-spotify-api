@@ -1,7 +1,26 @@
+@use "sass:color";
 @use '@/styles/scss/abstracts/' as *;
 
 .footerbottom {
+  display: flex;
   background: $primaryColor;
   color: $complementaryColor;
-  text-align: center;
+
+  justify-content: center;
+  align-content: center;
+
+
+  height: 5vh;
+
+  p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    //margin: 1.5vh;
+    //padding: 0.5rem;
+    font-size: 0.8em;
+    //color: color.adjust($complementaryColor, $lightness: 20%);
+  }
+
+
 }

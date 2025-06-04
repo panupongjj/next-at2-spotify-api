@@ -7,11 +7,10 @@ function Footer() {
 
   return (
     <div className={styles.footerbottom}>
-      <div className="container">
-        <p className="text-right pr-5">
-          &copy; {getCurrentYear()} Jay-downUnder.dev
-        </p>
-      </div>
+      <p>
+        &copy; {getCurrentYear()} Jay-downUnder.dev
+      </p>
+          
     </div>
   );
 }
