@@ -1,7 +1,9 @@
 import styles from './Layout.module.scss';
 import Header from './Header';
-import Footer from './Footer/Footer';
+import Footer from './Footer';
+import GoogleAnalytic from './GoogleAnalytic';
 import { Lato} from 'next/font/google';
+
 
 const lato = Lato({
   subsets: ['latin'],
@@ -9,11 +11,10 @@ const lato = Lato({
   style: ['normal', 'italic']
 })
 
-
-
 function Layout(props) {
   return (
     <div className={`${styles.app} ${lato.className}`}>
+      <GoogleAnalytic />  
       <Header />
       <main className={styles.main}>
         {props.children}

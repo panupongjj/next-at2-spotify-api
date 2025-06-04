@@ -44,6 +44,7 @@ module.exports = (phase) => {
     })(),
     C_ID: process.env.CLIENT_ID,
     C_SECRET: process.env.CLIENT_SECRET,
+    G_ID: process.env.GOOGLE_ANALYTIC_ID,
   }
 
   // Next.config returns an object
