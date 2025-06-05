@@ -24,8 +24,8 @@ const spotifyApiController = (function() {
    
    const _getGenres = async (token) => {
       // Fetch the genres from the Spotify API
-                                    
-      const response = await fetch('https://api.spotify.com/v1/browse/categories?locale=en_AU', {
+      const limit = 10;                            
+      const response = await fetch(`https://api.spotify.com/v1/browse/categories?limit=${limit}&locale=en_AU`, {
          method: 'GET',
          headers: {
             'Authorization': 'Bearer ' + token
@@ -37,7 +37,8 @@ const spotifyApiController = (function() {
          throw new Error('Failed to fetch Spotify genres');
       }
       const data = await response.json();
-      return data;
+      //console.log(data.categories.items);
+      return data.categories.items;
    }
 
    return {

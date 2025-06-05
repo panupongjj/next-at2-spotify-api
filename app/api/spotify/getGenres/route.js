@@ -8,7 +8,7 @@ export async function GET() {
     return NextResponse.json({ genres });
 
   } catch (error) {
-    console.error('Error in /api/genres:', error);
+    console.error('Error in /api/spotify/getGenres:', error);
     return NextResponse.json({ error: error.message }, { status: 500 });
   }
 }
