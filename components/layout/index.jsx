@@ -12,7 +12,7 @@ const lato = Lato({
 })
 
 function Layout(props) {
-  singletonArtistList.generateArtistList()
+  //singletonArtistList.generateArtistList()
   return (
     <div className={`${styles.app} ${lato.className}`}>
       <GoogleAnalytic />  

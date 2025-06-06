@@ -1,17 +1,26 @@
 
 import HeroSection from '@/components/layout/HeroSection';
 import singletonArtistList from '@/lib/artistsController';  
+import { Logger } from 'sass';
 export const metadata = {
   title: "Artist Spotify search",
   description: "Search for artists on Spotify",
 };
 
+async function getData() {
+  const response = await fetch(`${process.env.SERVER_NAME}/api/spotify/getArtistID`, { cache: 'no-store' });
+  const data = await response.json();
+  return data.artistObject;
+}
+
 
 async function artistsPage() {
+  //await singletonArtistList.generateArtistList();
   //singletonArtistList.generateArtistList()
-  
-  const artistsObject = singletonArtistList.getArtistListsObject();
-  const getArtistIdList = singletonArtistList.getArtistIdList();
+  const artistsObject = await getData();
+  //const artistsObject = singletonArtistList.getArtistListsObject();
+  //const getArtistIdList = singletonArtistList.getArtistIdList();
+  //console.log(artistsObject);
   
   return (
     <>
