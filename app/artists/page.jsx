@@ -10,6 +10,7 @@ export const metadata = {
 async function artistsPage() {
   //singletonArtistList.generateArtistList()
   const artistsObject = singletonArtistList.getArtistListsObject();
+  const getArtistIdList = singletonArtistList.getArtistIdList();
   
   return (
     <>
@@ -22,9 +23,15 @@ async function artistsPage() {
         <h1>Artists</h1>
         <p>Search for artists on Spotify</p>
         <p></p>
-     
         <ul>
-           {Object.entries(artistsObject).map(([id, artists]) => (
+          {getArtistIdList.map((element) => (
+            <li key = {element}>
+              <p>{element}</p>
+            </li>
+          ))}
+        </ul>
+        <ul>
+          {Object.entries(artistsObject).map(([id, artists]) => (
             <li key={id}>
             <p>Name: {artists.name}</p>
             <p>ID: {id}</p>
@@ -37,8 +44,6 @@ async function artistsPage() {
           </li>
            ))}
         </ul>
-
-
       </div>
     </>
 
