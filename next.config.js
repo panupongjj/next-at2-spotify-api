@@ -40,7 +40,7 @@ module.exports = (phase) => {
   const env = {
     SERVER_NAME: (() => {
       if (isDev) return 'http://localhost:3000'
-      if (isProd) return 'https://jay-downunder.dev/'
+      if (isProd) return 'http://localhost:3000'
     })(),
     C_ID: process.env.CLIENT_ID,
     C_SECRET: process.env.CLIENT_SECRET,
