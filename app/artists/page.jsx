@@ -1,6 +1,6 @@
 
 import HeroSection from '@/components/layout/HeroSection';
-import singletonArtistList from '@/lib/artistsController'; 
+import singletonArtistList from '@/lib/artistsController';  
 export const metadata = {
   title: "Artist Spotify search",
   description: "Search for artists on Spotify",
@@ -8,9 +8,8 @@ export const metadata = {
 
 
 async function artistsPage() {
-  singletonArtistList.generateArtistObjectForStaticPath()
-  const artistsObject = singletonArtistList.getArtistListObject();
-
+  //singletonArtistList.generateArtistList()
+  const artistsObject = singletonArtistList.getArtistListsObject();
   
   return (
     <>
