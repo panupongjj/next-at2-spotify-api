@@ -21,16 +21,16 @@ const getAlbum = async (artistID) => {
 }
 
 
-export async function generateStaticParams() {
-    const response = await fetch(`${process.env.SERVER_NAME}/api/spotify/getArtistID`, { cache: 'no-store' });
-    const data = await response.json();
-    if(!response.ok){
-      throw new Error(`Failed to fetch posts - Error ${data.status}: ${data.message}`)
-    }
-    //return data.arrArtistList.map(id => ({ artistID: id }));
-    return Object.keys(data.artistObject).map(id => ({artistID: id}));
+// export async function generateStaticParams() {
+//     const response = await fetch(`${process.env.SERVER_NAME}/api/spotify/getArtistID`, { cache: 'no-store' });
+//     const data = await response.json();
+//     if(!response.ok){
+//       throw new Error(`Failed to fetch posts - Error ${data.status}: ${data.message}`)
+//     }
+//     //return data.arrArtistList.map(id => ({ artistID: id }));
+//     return Object.keys(data.artistObject).map(id => ({artistID: id}));
     
-}
+// }
 
 async function AlbumPage({params}){
   const { artistID } = await params ;
