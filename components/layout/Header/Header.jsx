@@ -12,18 +12,18 @@ function Header() {
       <nav>
         <ul>
           <li>
-            <Link href='/genres'><span>GENRES</span></Link>
+            <Link href='/artists'><span>ARTISTS</span></Link>
           </li>
           <li>
-            <Link href="https://jay-downunder.dev/" target="_blank" rel="noopener noreferrer">
-                <span>DEPLOY</span>LINK
-            </Link>
+            <Link href='/about'><span>ABOUT</span>Us</Link>
           </li>
           <li>
             <Link href='/contact'><span>Contact</span>Us</Link>
           </li>
           <li>
-            <Link href='/nextjsdoc'><span>NEXTJS</span>-DOC</Link>
+            <Link href="https://jay-downunder.dev/" target="_blank" rel="noopener noreferrer">
+                <span>DEPLOY</span>LINK
+            </Link>
           </li>
         </ul>
       </nav>
