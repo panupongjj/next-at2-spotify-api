@@ -24,8 +24,8 @@ async function HomePage() {
   return (
     <>
       <HeroSection 
-        title='TOP 10 Spotify Artists'
-        description='Search for Top 10 artists on Spotify'
+        title='TOP 10 Artists on Spotify'
+        description='Search for Top 10 artists on Spotify and explore their album.'
         bgImage="/backgrounds/musicList.webp"
         artistsObject={artistsObject}
       />
