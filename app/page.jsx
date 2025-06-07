@@ -1,7 +1,6 @@
 //import { Fragment } from 'react';
 import HeroSection from '@/components/layout/HeroSection/HeroSection';
-//import ArticlesList from '@/components/features/articles/ArticlesList';
-import singletonArtistList from '@/lib/artistsController';
+
 export const metadata = {
   title: "Spotify API",
   description: "Assessment Task 2 - API",
@@ -9,7 +8,7 @@ export const metadata = {
   icon: '/images/favicon.ico',
   },
 };
-function HomePage({articles}) {
+function HomePage() {
 
   return (
     <>

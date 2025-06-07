@@ -1,10 +1,9 @@
 
 import HeroSection from '@/components/layout/HeroSection';
-import singletonArtistList from '@/lib/artistsController';  
-import { Logger } from 'sass';
+
 export const metadata = {
-  title: "Artist Spotify search",
-  description: "Search for artists on Spotify",
+  title: "TOP 10 Spotify Artists",
+  description: "Search for top 10 artists on Spotify",
 };
 
 async function getData() {
@@ -25,11 +24,12 @@ async function artistsPage() {
   return (
     <>
       <HeroSection 
-        title='Artists'
-        description='Search for artists on Spotify'
+        title='TOP 10 Spotify Artists'
+        description='Search for Top 10 artists on Spotify'
         bgImage="/backgrounds/musicList.webp"
+        artistsObject={artistsObject}
       />
-      <div>
+      {/* <div>
         <h1>Artists</h1>
         <p>Search for artists on Spotify</p>
         <p></p>
@@ -51,7 +51,7 @@ async function artistsPage() {
           </li>
            ))}
         </ul>
-      </div>
+      </div> */}
     </>
 
   );

@@ -2,22 +2,24 @@ import ArticleItem from '../ArticleItem/ArticleItem'
 import Container from '@/components/common/Container/Container';
 
 function ArticlesList(props) {
-  const { articles } = props;
+  //const { artistsObject } = props;
 
   return (
     <Container>
-      {articles.map((article, index) => (
+      {Object.entries(props.artistsObject).map(([id, artists], index) => (
         <ArticleItem
-          key={article.id ? article.id : index }
-          id={article.id ? article.id : index }
-          image={article.image}
-          urlToImage={article.urlToImage}
-          url={article.url}
-          title={article.title}
-          description={article.description}
-          category={article.category}
+          key={id ? id : index }
+          id={id ? id : index }
+          //image={artists.images[1]?.url}
+          urlToImage={artists.images[1]?.url}
+          url={"/artists/" + id}
+          title={artists.name}
+          //description={artists.popularity}
+          category={artists.name}
         />
+        
       ))}
+      
     </Container>
   );
 }
