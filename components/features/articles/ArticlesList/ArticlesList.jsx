@@ -12,7 +12,7 @@ function ArticlesList(props) {
           id={id ? id : index }
           //image={artists.images[1]?.url}
           urlToImage={artists.images[1]?.url}
-          url={"/artists/" + id}
+          url={"/" + id}
           title={artists.name}
           //description={artists.popularity}
           category={artists.name}

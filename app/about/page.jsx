@@ -13,7 +13,7 @@ async function AboutPage() {
       <HeroSection 
         title='About Us'
         description='About Us page for the music app'
-        bgImage="/backgrounds/aboutus.jpg"
+        bgImage="/backgrounds/Top-10-2.jpg"
       />
     </>
 

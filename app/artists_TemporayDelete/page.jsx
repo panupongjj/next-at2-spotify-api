@@ -2,7 +2,7 @@
 import HeroSection from '@/components/layout/HeroSection';
 
 export const metadata = {
-  title: "TOP 10 Spotify Artists",
+  title: "TOP 10 Artists on Spotify ",
   description: "Search for top 10 artists on Spotify",
 };
 
