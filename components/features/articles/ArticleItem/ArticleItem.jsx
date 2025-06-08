@@ -25,11 +25,25 @@ function ArticleItem(props) {
                 fill={true}
                 sizes="(max-width: 768px) 100vw, 50vw"
               /> }
+              {<Image 
+                className={styles.hoverImage}
+                src={'/backgrounds/play-button.png'} 
+                alt={props.title} 
+                fill={true}
+                sizes="(max-width: 768px) 100vw, 50vw"
+              /> }
           </Link>
         </div>
         <div className={styles.articleContent}>
-          <h2>{props.title}</h2>
-          {/* <p>{props.description}</p> */}
+          <h2 className={styles.textName}>{props.title} </h2> 
+          <Link className={styles.textLink}
+            href={props.spotifyUrl}
+            target={"_blank"}
+          > 
+              {  <img src="/icons/spotify.svg" />}
+      
+          </Link>
+         
         </div>
       </div>
     </Card>

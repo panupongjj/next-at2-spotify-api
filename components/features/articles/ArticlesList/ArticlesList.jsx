@@ -3,7 +3,8 @@ import Container from '@/components/common/Container/Container';
 
 function ArticlesList(props) {
   //const { artistsObject } = props;
-
+  //console.log(artistsObject);
+  
   return (
     <Container>
       {Object.entries(props.artistsObject).map(([id, artists], index) => (
@@ -13,6 +14,7 @@ function ArticlesList(props) {
           //image={artists.images[1]?.url}
           urlToImage={artists.images[1]?.url}
           url={"/" + id}
+          spotifyUrl={artists.external_urls.spotify}
           title={artists.name}
           //description={artists.popularity}
           category={artists.name}
