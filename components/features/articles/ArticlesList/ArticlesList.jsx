@@ -3,7 +3,6 @@ import Container from '@/components/common/Container/Container';
 
 function ArticlesList(props) {
   //const { artistsObject } = props;
-  //console.log(artistsObject);
   
   return (
     <Container>
@@ -18,6 +17,7 @@ function ArticlesList(props) {
           title={artists.name}
           //description={artists.popularity}
           category={artists.name}
+          type = {artists.type}
         />
         
       ))}

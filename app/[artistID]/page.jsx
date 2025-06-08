@@ -38,26 +38,27 @@ async function AlbumPage({params}){
   // console.log("artistID is:",artistID);
   // console.log("type of artistID:", typeof artistID);
   // console.log("----------------------------------");
-  let albumList;
+  let artistsObject;
   try{
-       albumList = await getAlbum(artistID);
+       artistsObject = await getAlbum(artistID);
   }
   catch (error) {
     console.error("Invalid artistID or fetch failed:", error);
     notFound();
   }
-  albumList = albumList.playlists;
+  artistsObject = artistsObject.playlists;
   //console.log(albumList);
   
   return(
   <>
     <HeroSection 
-      title='PlayListPage'
+      title='TOP 10 Albums of the artist '
       description='Explore the album of artist'
       bgImage="/backgrounds/musicList.webp"
+      artistsObject={artistsObject}
     />
 
-    <div>
+    {/* <div>
       <h1>Artists</h1>
       <p>Search for artists on Spotify</p>
       <p></p>
@@ -75,7 +76,7 @@ async function AlbumPage({params}){
         </li>
           ))}
       </ul>
-    </div>
+    </div> */}
   </>
   )
 }

@@ -3,7 +3,7 @@ import ArticlesList from "@/components/features/articles/ArticlesList";
 
 function HeroSection(props) {
   // SEE on STATIC ASSETS: https://nextjs.org/docs/pages/building-your-application/optimizing/static-assets
-  //console.log(props);
+  //console.log(props.artistsObject);
   
   return (
     <div 

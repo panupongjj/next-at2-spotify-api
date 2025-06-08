@@ -9,23 +9,28 @@ import Link from 'next/link';
 
 
 function ArticleItem(props) {
+  //console.log(props.type);
+  
   return (
     <Card size="grid">
       {/* CARD MAIN */}
       <div className={styles.articleMain}>
         <div className={styles.imageBox}>
           <Link className={styles.imageLink}
-            href={props.url}
+            href={props.type === 'artist'? props.url : props.spotifyUrl}
             target={"_blank"}
           > 
-              {<Image 
+              {
+                <Image 
                 className={styles.nextImage}
                 src={props.urlToImage} 
                 alt={props.title} 
                 fill={true}
                 sizes="(max-width: 768px) 100vw, 50vw"
-              /> }
-              {<Image 
+              /> 
+              }
+              {
+                <Image 
                 className={styles.hoverImage}
                 src={'/backgrounds/play-button.png'} 
                 alt={props.title} 
@@ -36,13 +41,18 @@ function ArticleItem(props) {
         </div>
         <div className={styles.articleContent}>
           <h2 className={styles.textName}>{props.title} </h2> 
-          <Link className={styles.textLink}
-            href={props.spotifyUrl}
-            target={"_blank"}
-          > 
+          {
+            props.type === 'artist'?
+            <Link className={styles.textLink}
+               href={props.spotifyUrl}
+              target={"_blank"}
+              rel="noopener noreferrer"> 
               {  <img src="/icons/spotify.svg" />}
       
-          </Link>
+            </Link>
+           : true              
+          }
+          
          
         </div>
       </div>
