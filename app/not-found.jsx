@@ -13,7 +13,7 @@ const NotFoundPage = () => {
         <span>
           <Image 
             src={notFound}
-            //alt="not found 404" 
+            lt="not found 404" 
             height="80"
             width="90"
           />
