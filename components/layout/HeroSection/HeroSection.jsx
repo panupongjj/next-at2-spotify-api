@@ -9,6 +9,8 @@ function HeroSection(props) {
     <div 
       className={styles.showcase}
       style={{ backgroundImage: `url(${props.bgImage})` }}
+      //role="img"
+      //aria-label="Musical background with Spotify theme"
     >
       <div className={styles.overlay}>
         <h1><span>{props.title}</span></h1>

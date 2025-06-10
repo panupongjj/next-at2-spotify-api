@@ -19,13 +19,13 @@ function ArticleItem(props) {
           <Link className={styles.imageLink}
             href={props.type === 'artist'? props.url : props.spotifyUrl}
             target={"_blank"}
-            aria-label={`Click for more about ${props.title}`}
+            //aria-label={`Click for more about ${props.title}`}
           > 
               {
                 <Image 
                 className={styles.nextImage}
                 src={props.urlToImage} 
-                alt={props.title} 
+                //alt={`Picture of ${props.title}`} 
                 fill={true}
                 sizes="(max-width: 768px) 100vw, 50vw"
               /> 
@@ -34,7 +34,7 @@ function ArticleItem(props) {
                 <Image 
                 className={styles.hoverImage}
                 src={'/backgrounds/play-button.png'} 
-                alt={props.title} 
+                //alt={`Picture of ${props.title}`} 
                 fill={true}
                 sizes="(max-width: 768px) 100vw, 50vw"
               /> }
@@ -47,7 +47,7 @@ function ArticleItem(props) {
             <Link className={styles.textLink}
               href={props.spotifyUrl}
               target={"_blank"}
-              aria-label="Read more about Seminole tax hike"
+              //aria-label="Read more about Seminole tax hike"
               rel="noopener noreferrer"> 
               {  <img src="/icons/spotify.svg" />}
       
