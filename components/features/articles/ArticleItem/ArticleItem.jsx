@@ -19,6 +19,7 @@ function ArticleItem(props) {
           <Link className={styles.imageLink}
             href={props.type === 'artist'? props.url : props.spotifyUrl}
             target={"_blank"}
+            aria-label={`Click for more about ${props.title}`}
           > 
               {
                 <Image 
@@ -44,8 +45,9 @@ function ArticleItem(props) {
           {
             props.type === 'artist'?
             <Link className={styles.textLink}
-               href={props.spotifyUrl}
+              href={props.spotifyUrl}
               target={"_blank"}
+              aria-label="Read more about Seminole tax hike"
               rel="noopener noreferrer"> 
               {  <img src="/icons/spotify.svg" />}
       
